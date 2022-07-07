@@ -1,0 +1,191 @@
+body {
+    padding :0;
+    margin : 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    
+    height: 100vh;
+    background: #Fbfbfb;
+}
+
+.navbar {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 99%;
+    height: 65px;
+    background: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 16px;
+    margin: 0 8px;
+}
+.navbar span{
+    font-weight: 600;
+    
+    font-size: 24px;
+    margin-left: 20px;
+}
+h1 {
+    font-weight: 600;
+    
+    font-size: 24px;
+}
+.sub-container {
+    margin: 0 8px;
+}
+.sub-container form {
+    width: 100%;
+    min-height: 150px;
+    background: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form .user-input {
+    font-weight: 500;
+    font-size: 17px;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 50px;
+}
+form .user-input div {
+    margin: 0 20px;
+}
+form .user-input div p {
+    margin: 0;
+    padding : 0;
+}
+form .user-input > * {
+    display: flex;
+    flex-direction: column;
+}
+form #itemName,#Category,tbody input,tbody select {
+    padding: 10px;
+    font-weight: 300;
+    font-size: 15px; 
+    width: 200px;
+    border-radius: 16px;
+    border: 0.5px solid rgb(108, 106, 106);
+    
+}
+tbody input:disabled {
+  background: rgb(255, 255, 255);
+  color: rgb(189, 179, 179);
+  border-color: rgb(168, 160, 160);
+}
+select option {
+    margin: 10px 0;
+    border: 0.5px solid rgb(108, 106, 106);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 16px;
+}
+
+.imageInput input[type="file"] {
+  padding: 10px;
+    font-weight: 300;
+    font-size: 15px; 
+    width: 200px;
+    border-radius: 16px;
+    border: 0.5px solid rgb(108, 106, 106);
+}
+.imageDisplay {
+  padding: 10px;
+}
+.button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 700;
+    border: 0.2px solid rgb(164, 162, 162);
+    border-radius: 16px;
+    cursor: pointer;
+    color: #ffff;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.button:hover {
+    filter: brightness(105%);
+} 
+
+.insert {
+    background: #649CD9;
+}
+.edit {
+    background: #F2AC42;
+}
+.delete,.cancel {
+    background: #E16071;
+}
+.saveUpdate {
+  background: #64d989;
+}
+.list {
+  margin-top: 30px;
+  
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+}
+
+th {
+  background-color: rgb(12, 80, 158);
+  color: #ffffff;
+}
+tbody tr:nth-child(even) {
+
+  background-color: #f5f5f5;
+}
+tbody img {
+  width: 200px;
+  height: 200px;
+}
+
+  
+  /*responsive*/
+  
+  @media (max-width: 500px) {
+    .table thead {
+      display: none;
+    }
+  
+    .table,
+    .table tbody,
+    .table tr,
+    .table td {
+      display: block;
+      width: 100%;
+    }
+    .table tr {
+      margin-bottom: 15px;
+    }
+    .table td {
+      text-align: right;
+      padding-left: 50%;
+      text-align: right;
+      position: relative;
+    }
+    .table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="renderTable()">
+    <div class="container">
+      <nav class="navbar">
+        <span>Logo.</span>
+      </nav>
+      <div class="sub-container">
+        <h1>Simple image management</h1>
+
+        <form action="" id="form" onsubmit="event.preventDefault()">
+          <div class="user-input">
+            <div>
+              <p>Item Name:</p>
+              <input type="text" id="itemName" placeholder="Item name" />
+              <p id="invalid" class="invalid"></p>
+            </div>
+
+            <div>
+              <p>Item Category:</p>
+              <select id="Category">
+                <option value="Category 0">No Selected</option>
+                <option value="Category 1">Category 1</option>
+                <option value="Category 2">Category 2</option>
+                <option value="Category 3">Category 3</option>
+              </select>
+              <p id="invalid2" class="invalid"></p>
+            </div>
+
+            <div class="imageInput">
+              <p>Item Image:</p>
+              <input type="file" id="Imgfile" onchange="readURL(this);" />
+            </div>
+
+            <div class="imageDisplay">
+              <p>Image Preview: </p>
+              <img
+                id="idimg"
+                class="previewimg"
+                accept="image/png, image/jpeg"
+              />
+            </div>
+          </div>
+          <div class="user-action">
+            <button class="button insert">Submit</button>
+          </div>
+        </form>
+
+        <table class="list">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Item Name</th>
+              <th>Item Category</th>
+              <th>Item Image</th>
+              <th>User Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="srcipt.js"></script>
+  </body>
+</html>
